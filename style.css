@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+}
+
+.background-container{
+    background-color: #191919;
+    display: flex;
+    color: white;
+}
+
+.link{
+    display: flex;
+    text-align: center;
+    height: 1px;
+    align-items: center;
+    gap: 10px;
+    padding: 4%;
+}
+
+.layer1{
+    background-color: rgba(249, 244, 238, 0.899);
+    height: 40vh;
+    display: flex;
+    align-items:end;
+    padding: 10%;
+
+}
+
+
+.aa {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 10px solid #000000;
+}
+
+.layer1Container{
+    color: rgb(0, 0, 0);
+}
+
+
+.layer2{
+    background-color:#000000 ;
+    color: white;
+    height: 15vh;
+    padding: 5%;
+}
+
+.layer3{
+    background-color: rgba(249, 244, 238, 0.899);
+    height: 30vh;
+    padding: 5%;
+    background-color: rgba(249, 244, 238, 0.899);
+}
+
+.layer4{
+    height: 60vh;
+    padding: 3%;
+    background-color: rgba(249, 244, 238, 0.899);
+}
+
+.layer5{
+    height: 30vh;
+    text-align: center;
+    padding: 10%;
+    background-color: rgba(249, 244, 238, 0.899);
+}
+
+.layer6{
+text-align: center;
+height: 40vh;
+background-color: rgba(249, 244, 238, 0.899);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#git{
+    color: #000;
+}
+
+footer{
+    height: 20vh;
+    background-color: #191919;
+    text-align: center;
+    color: #ffffff;
+    padding: 50px;
+}
+
+#preloader{
+    background: #ffffff url(img/loader.gif) no-repeat center ;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 1s ease-out; 
+  }
+  
