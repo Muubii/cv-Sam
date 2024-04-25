@@ -1,101 +1,171 @@
-*{
-    margin: 0px;
+* {
+    margin: 0;
 }
 
-.background-container{
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 60px; 
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c8c8c8;
+}
+
+.layer2, .layer3, .layer4, .layer5, .layer6, .layer1 {
+    transition: background-color 0.5s, opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.layer1Container {
+    color: black;
+}
+
+.layer1, .layer3, .layer4, .layer5, .layer6 {
+    background-color: rgba(249, 244, 238, 0.899);
+    padding: 10%;
+}
+
+.layer5{
+    padding: 15%;
+    height: 20vh;
+    text-align: center;
+}
+
+.layer2 {
+    background-color: black;
+    color: white;
+    padding: 5%;
+    animation-delay: 0s;
+}
+
+.layer3{
+    height: 15vh;
+}
+
+
+
+footer{
     background-color: #191919;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    height: 10vh;
+}
+
+.background-container {
     display: flex;
+    justify-content: space-between; 
+    position: fixed; 
+    top: 0;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000; 
+    padding: 10px 0; 
+    transition: background-color 0.5s; 
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#a{
     color: white;
 }
-
-.link{
-    display: flex;
-    text-align: center;
-    height: 1px;
-    align-items: center;
-    gap: 10px;
-    padding: 4%;
-}
-
-.layer1{
-    background-color: rgba(249, 244, 238, 0.899);
-    height: 40vh;
-    display: flex;
-    align-items:end;
-    padding: 10%;
-
-}
-
-
 .aa {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    border: 10px solid #000000;
+    border: 10px solid #c0ded9;
+    animation: pulse 2s infinite;
+    border-color: black;
 }
 
-.layer1Container{
-    color: rgb(0, 0, 0);
-}
-
-
-.layer2{
-    background-color:#000000 ;
-    color: white;
-    height: 15vh;
-    padding: 5%;
-}
-
-.layer3{
-    background-color: rgba(249, 244, 238, 0.899);
-    height: 50vh;
-    padding: 5%;
-    background-color: rgba(249, 244, 238, 0.899);
-}
-
-.layer4{
-    height: 60vh;
-    padding: 3%;
-    background-color: rgba(249, 244, 238, 0.899);
-}
-
-.layer5{
-    height: 30vh;
+.link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4%;
+    height: 1px;
     text-align: center;
-    padding: 10%;
-    background-color: rgba(249, 244, 238, 0.899);
 }
 
-.layer6{
-text-align: center;
-height: 40vh;
-background-color: rgba(249, 244, 238, 0.899);
-}
-a{
-    text-decoration: none;
-    color: white;
-}
 
-#git{
-    color: #000;
-}
 
-footer{
-    height: 20vh;
-    background-color: #191919;
-    text-align: center;
-    color: #ffffff;
-    padding: 50px;
-}
 
-#preloader{
-    background: #ffffff url(img/loader.gif) no-repeat center ;
-    background-size: 20%;
-    height: 100vh;
+/* ???????????????? */
+
+
+.second {
+    padding: 15px;
     width: 100%;
-    position: fixed;
-    z-index: 100;
-    opacity: 1;
-    transition: opacity 1s ease-out; 
+    height: 40vh;
   }
-  
+
+
+  .random {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-left: 37%;
+  }
+
+  .images-second {
+    margin-top: 5%;
+    justify-content: space-evenly;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-direction: row;
+  }
+  .image-subtext img {
+      height: 20vh;
+      width:20vh;
+      border-radius: 10px;
+      border:solid rgb(0, 0, 0) 2px;
+  }
+
+
+  #as{
+    color: black;
+  }
+
+  .layer3Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.languages, .education {
+    width: 50%;
+}
+
+.workExperience {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.andom {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    margin-left: 35%;
+  }
