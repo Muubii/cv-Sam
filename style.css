@@ -1,11 +1,14 @@
 * {
     margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    padding-top: 60px; 
-
+    padding-top: 60px;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 a {
@@ -19,15 +22,11 @@ a:hover {
     color: #c8c8c8;
 }
 
-.layer2, .layer3, .layer4, .layer5, .layer6, .layer1 {
+.layer1, .layer2, .layer3, .layer4, .layer5, .layer6 {
     transition: background-color 0.5s, opacity 1s ease-out, transform 1s ease-out;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 1s ease-out forwards;
-}
-
-.layer1Container {
-    color: black;
 }
 
 .layer1, .layer3, .layer4, .layer5, .layer6 {
@@ -35,31 +34,17 @@ a:hover {
     padding: 10%;
 }
 
-.layer5{
-    padding: 15%;
-    height: 20vh;
-    text-align: center;
-}
-
 .layer2 {
     background-color: black;
     color: white;
     padding: 5%;
-    animation-delay: 0s;
 }
 
-.layer3{
-    height: 15vh;
-}
-
-
-
-footer{
+footer {
     background-color: #191919;
     color: white;
     text-align: center;
-    padding: 40px;
-    height: 10vh;
+    padding: 30px;
 }
 
 .background-container {
@@ -71,7 +56,6 @@ footer{
     background-color: rgba(0, 0, 0, 0.8); 
     z-index: 1000; 
     padding: 10px 0; 
-    transition: background-color 0.5s; 
 }
 
 @keyframes fadeIn {
@@ -81,16 +65,34 @@ footer{
     }
 }
 
-#a{
-    color: white;
+.layer3Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+  .workExperience {
+    width: 100%;
+    margin-top: 20px;
+}
+
+  .languages, .education {
+    width: 50%;
+}
+
+
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .aa {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    border: 10px solid #c0ded9;
+    border: 10px solid #000000;
     animation: pulse 2s infinite;
-    border-color: black;
 }
 
 .link {
@@ -98,74 +100,70 @@ footer{
     align-items: center;
     gap: 10px;
     padding: 4%;
-    height: 1px;
-    text-align: center;
 }
-
-
-
-
-/* ???????????????? */
-
 
 .second {
     padding: 15px;
     width: 100%;
-    height: 40vh;
-  }
+}
 
-
-  .random {
+.images-second {
     display: flex;
-    text-align: center;
-    flex-direction: row;
-    margin-left: 37%;
-  }
-
-  .images-second {
-    margin-top: 5%;
     justify-content: space-evenly;
-    margin-left: 15%;
-    margin-right: 15%;
-    display: flex;
-    flex-direction: row;
-  }
-  .image-subtext img {
-      height: 20vh;
-      width:20vh;
-      border-radius: 10px;
-      border:solid rgb(0, 0, 0) 2px;
-  }
-
-
-  #as{
-    color: black;
-  }
-
-  .layer3Container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 2%;
 }
 
-.topSection {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.image-subtext img {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 10px;
+    border: solid rgb(0, 0, 0) 2px;
 }
 
-.languages, .education {
-    width: 50%;
+@media (max-width: 600px) {
+    .layer1, .layer3, .layer4, .layer5, .layer6, .layer2 {
+        padding: 5%; 
+    }
+
+    .background-container, .link, .second, .images-second {
+        flex-direction: column;
+    }
+
+    .aa {
+        width: 100px;
+        height: 100px;
+    }
 }
 
-.workExperience {
-    width: 100%;
-    margin-top: 20px;
+@media (min-width: 601px) and (max-width: 900px) {
+    .layer1, .layer3, .layer4, .layer5, .layer6, .layer2 {
+        padding: 7%; 
+    }
+
+    .images-second {
+        flex-direction: column; 
+    }
 }
 
-.andom {
-    display: flex;
+@media (min-width: 901px) {
+}
+
+#a{
+    color: #ffffff;
+}
+
+.random{
     text-align: center;
-    flex-direction: row;
-    margin-left: 35%;
-  }
+    padding: 3%;
+}
+
+#as{
+    color: #000000;
+}
+
+.layer5{
+    text-align: center;
+    padding: 25%;
+    height: 80vh;
+}
+
