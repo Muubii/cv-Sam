@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Reveal Animation</title>
+    <link rel="stylesheet" href="test.css">
+    <!-- GSAP Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!-- Loader with two triangular clips -->
+    <div class="loader">
+        <div class="loader-clip clip-left"></div>
+        <div class="loader-clip clip-right"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <div class="nav">
+            <div class="logo">Brand</div>
+            <div class="nav-items">
+                <a href="#">Design</a>
+                <a href="#">Merch</a>
+                <a href="#">Info</a>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Play film</p>
+            <p>High quality video production 
+            <br>Made in Iceland</p>
+            <p>Brand 2022</p>
+        </div>
+    </div>
+
+    <!-- GSAP Animation Script -->
+    <script>
+        // Animate the left triangle to slide out to the left
+        gsap.to(".clip-left", {
+            duration: 1.5,
+            x: "-100%",
+            ease: "power2.inOut",
+            delay: 1
+        });
+
+        // Animate the right triangle to slide out to the right
+        gsap.to(".clip-right", {
+            duration: 1.5,
+            x: "100%",
+            ease: "power2.inOut",
+            delay: 1
+        });
+    </script>
+</body>
+</html>
