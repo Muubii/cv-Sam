@@ -8,7 +8,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding-top: 60px;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
 }
 
 a {
@@ -71,17 +71,16 @@ footer {
     align-items: center;
 }
 
-  .workExperience {
+.workExperience {
     width: 100%;
     margin-top: 20px;
 }
 
-  .languages, .education {
+.languages, .education {
     width: 50%;
 }
 
-
-  .topSection {
+.topSection {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -113,12 +112,28 @@ footer {
     padding: 2%;
 }
 
+.image-subtext {
+    text-align: center;
+}
+
 .image-subtext img {
     height: 20vh;
     width: 20vh;
     border-radius: 10px;
     border: solid rgb(0, 0, 0) 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.image-subtext img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.image-subtext p {
+    margin-top: 10px;
+    color: #000;
+}
+
 
 @media (max-width: 600px) {
     .layer1, .layer3, .layer4, .layer5, .layer6, .layer2 {
@@ -146,24 +161,54 @@ footer {
 }
 
 @media (min-width: 901px) {
+    /* No specific styles */
 }
 
-#a{
+#a {
     color: #ffffff;
 }
 
-.random{
+.random {
     text-align: center;
     padding: 3%;
 }
 
-#as{
+#as {
     color: #000000;
 }
 
-.layer5{
+.layer5 {
     text-align: center;
     padding: 25%;
     height: 80vh;
 }
 
+/* Loader Styles */
+.loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 10000; /* Ensure it covers the entire content */
+}
+
+.loader-clip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.clip-left {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    left: 0;
+    top: 0;
+}
+
+.clip-right {
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+    left: 0;
+    top: 0;
+}
