@@ -9,6 +9,8 @@ body {
     padding-top: 60px;
     width: 100%;
     overflow-x: hidden; 
+    height: 50vh;
+    background-color: rgba(249, 244, 238, 0.899);
 }
 
 a {
@@ -35,7 +37,7 @@ a:hover {
 }
 
 .layer2 {
-    background-color: black;
+    background-color: #424242;
     color: white;
     padding: 5%;
 }
@@ -102,8 +104,13 @@ footer {
 }
 
 .second {
-    padding: 15px;
     width: 100%;
+    background-color: white;
+}
+
+.second1 {
+    width: 100%;
+    background-color: rgba(249, 244, 238, 0.899);
 }
 
 .images-second {
@@ -134,6 +141,39 @@ footer {
     color: #000;
 }
 
+.JavaContainer{
+    display: flex;
+    width: 40vw;
+}
+
+
+.cssContainer{
+    display: flex;
+    width: 60vw;
+}
+
+.javascriptContainer{
+    display: flex;
+    width: 60vw;
+}
+
+.phpContainer{
+    grid-row: auto;
+    width: 40vw;
+}
+
+#Topic{
+    text-align: center;
+}
+
+.overMezelf {
+    width: 45vw;
+}
+
+.layer2Container {
+    padding-left: 5%; 
+}
+
 
 @media (max-width: 600px) {
     .layer1, .layer3, .layer4, .layer5, .layer6, .layer2 {
@@ -161,7 +201,7 @@ footer {
 }
 
 @media (min-width: 901px) {
-    /* No specific styles */
+   
 }
 
 #a {
@@ -183,7 +223,6 @@ footer {
     height: 80vh;
 }
 
-/* Loader Styles */
 .loader {
     position: fixed;
     width: 100vw;
@@ -191,7 +230,7 @@ footer {
     overflow: hidden;
     top: 0;
     left: 0;
-    z-index: 10000; /* Ensure it covers the entire content */
+    z-index: 10000; 
 }
 
 .loader-clip {
