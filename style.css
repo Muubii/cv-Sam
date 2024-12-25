@@ -10,18 +10,80 @@ body {
     width: 100%;
     overflow-x: hidden; 
     height: 50vh;
-    background-color: rgba(249, 244, 238, 0.899);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
     transition: color 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
     color: #c8c8c8;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 60vh;
+    position: relative; 
+    height: 50vh;
+    padding-left: 3vh;
+}
+
+
+.modal-content h1{
+    padding-top: 2vh;
+}
+
+.modal-content p{
+    padding-top: 4vh;
+    width: 55vh;
+    font-size: 1.3rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: red; 
+}
+
+h1 {
+    margin-top: 0; 
 }
 
 .layer1, .layer2, .layer3, .layer4, .layer5, .layer6 {
@@ -31,9 +93,87 @@ a:hover {
     animation: fadeIn 1s ease-out forwards;
 }
 
-.layer1, .layer3, .layer4, .layer5, .layer6 {
-    background-color: rgba(249, 244, 238, 0.899);
+.layer3, .layer4, .layer5, .layer6 {
     padding: 10%;
+}
+
+.layer1{
+    padding: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.layer1Container{
+    width: 25vw;
+    margin-left: 8vw;
+}
+.mainTextContainer{
+    padding-top: 5vw;
+}
+
+.MainText{
+    font-size: 1.5vw;
+    padding-top: 3px;
+}
+#mainName{
+    font-size: 2.5rem;
+}
+.contactButton{
+    background-color: #D9D9D9;
+    width: 7vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.workContainer {
+    padding: 10%;
+}
+
+.workItemsContainer {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 7vw; 
+    justify-items: center; 
+    align-items: center; 
+}
+
+.workItems {
+    background-color: #424242;
+    width: 35vw;
+    height: 20vw;
+    border-radius: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.workContainerText{
+    text-align: center;
+    font-size: 2.5vw;
+    padding-bottom: 5vh;
+}
+
+.moreProjects{
+    padding-top: 10vh;
+    text-align: center;
+    color: #1D78D2;
+    font-size: 1.2vw;
+}
+
+.mainText{
+    padding-bottom: 3vh;
+    font-weight: bold;
+}
+
+.subText{
+    font-size: 1.5vw;
+    padding-bottom: 1.5vw;
+    font-weight: lighter;
+    /* font-style: italic; */
+    
 }
 
 .layer2 {
@@ -43,7 +183,7 @@ a:hover {
 }
 
 footer {
-    background-color: #191919;
+    background-color: #202020;
     color: white;
     text-align: center;
     padding: 30px;
@@ -52,12 +192,37 @@ footer {
 .background-container {
     display: flex;
     justify-content: space-between; 
+    background-color: white;
+    transition: background-color 0.3s ease;
+    align-items: center; 
     position: fixed; 
     top: 0;
     width: 100%; 
-    background-color: rgba(0, 0, 0, 0.8); 
     z-index: 1000; 
-    padding: 10px 0; 
+    padding:5vh 20px;
+}
+
+.background-container.scrolled {
+    background-color: #202020;
+}
+
+.background-container .link a {
+    color: black;
+}
+
+.background-container.scrolled .link a {
+    color: white;
+}
+
+.background-container.scrolled #sam-siu {
+    color: white;
+}
+
+#sam-siu {
+    flex: 1; 
+    padding-left: 10vw;
+    text-align: left;
+    font-size: 1.5rem; 
 }
 
 @keyframes fadeIn {
@@ -70,7 +235,6 @@ footer {
 .layer3Container {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .workExperience {
@@ -79,28 +243,46 @@ footer {
 }
 
 .languages, .education {
+    background-color: #D9D9D9;
+    padding: 10vh 10vh 10vh 2vh;
+}
+
+.workExperience{
+    background-color: #D9D9D9;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 3vh;
     width: 50%;
 }
 
-.topSection {
+.topSection, .bottemSection {
     display: flex;
-    justify-content: space-between;
+    gap: 5%;
     width: 100%;
 }
 
 .aa {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
-    border: 10px solid #000000;
+    margin-left: 10vw;
+    height: 30vw;
+    width: 30vw;
+    border-radius: 2%;
+    border: 1px solid #000000;
     animation: pulse 2s infinite;
 }
 
 .link {
+    flex: 2; 
     display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 4%;
+    gap: 20px; 
+}
+.link a {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.link a:hover {
+    text-decoration: underline;
+    color: #c8c8c8;
 }
 
 .second {
@@ -110,7 +292,6 @@ footer {
 
 .second1 {
     width: 100%;
-    background-color: rgba(249, 244, 238, 0.899);
 }
 
 .images-second {
@@ -145,7 +326,6 @@ footer {
     display: flex;
     width: 40vw;
 }
-
 
 .cssContainer{
     display: flex;
@@ -185,8 +365,8 @@ footer {
     }
 
     .aa {
-        width: 100px;
-        height: 100px;
+        width: 10vw;
+        height: 10vw;
     }
 }
 
@@ -211,6 +391,7 @@ footer {
 .random {
     text-align: center;
     padding: 3%;
+    font-size: 2vw;
 }
 
 #as {
@@ -223,31 +404,8 @@ footer {
     height: 80vh;
 }
 
-.loader {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    z-index: 10000; 
-}
-
-.loader-clip {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
-
-.clip-left {
-    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-    left: 0;
-    top: 0;
-}
-
-.clip-right {
-    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
-    left: 0;
-    top: 0;
+.cvText{
+    padding-left: 34vw;
+    padding-bottom: 7vw;
+    font-size: 2vw;
 }

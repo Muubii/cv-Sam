@@ -6,73 +6,81 @@
     <title>Home</title>
     <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
-
-    <div class="loader">
-        <div class="loader-clip clip-left"></div>
-        <div class="loader-clip clip-right"></div>
-    </div>
-
     <section>
         <nav class="background-container">
+            <div id="sam-siu">Sam Siu</div>
             <div class="link">
-                <div id="a">Sam Siu</div>
-                <div>
-                    <a href="index.html">Home</a>
-                </div>
-                <div>
-                    <a href="Projecten.html">Projecten</a>
-                </div>
-                <div>
-                    <a href="Contact.html">Contact</a>
-                </div>
+                <a href="#">Home</a>
+                <a href="#work">Work</a>
+                <a href="#Characteristics">Characteristics</a>
+                <a href="#cv">Résumé</a>
+                <a href="javascript:void(0);" id="about-link">About</a>
             </div>
         </nav>
     </section>
-        
+
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h1>About Sam</h1>
+            <p>My name is Sam, and I am an enthusiastic software developer in training at MBO College Almere. 
+                I have explored Java, JavaScript, PHP, and MySQL Workbench. Through my studies and project work, 
+                I have gained not only technical skills but also learned the importance of teamwork, communication, 
+                and perseverance in this sector. My goal is to become a full-stack developer, constantly seeking new 
+                knowledge and learning new techniques. Feel free to check out my projects to get a sense of my work 
+                and the journey I've taken as a developer. Outside coding, I enjoy sports and listening to music.</p>
+        </div>
+    </div>
+
     <div class="layer1">
         <div class="layer1Container">
-            <img src="img/me.jpeg" alt="" class="aa">
-            <p>Software Developer</p>
-            <h2>Sam Siu</h2>
-            <p>Mijn naam is Sam, ik ben 17 jaar, ik studeer software development en ik zoek een stageplek!</p>
+            <div class="mainTextContainer">
+                <div class="mainText">
+                    <h2 id="mainName">Sam Siu</h2>
+                    <p>Software Developer</p>
+                </div>
+                <p class="subText">My name is Sam, I am 17 years old, I study software development, and I am looking for an internship!</p>
+                
+                <a href="mailto:siu7279@outlook.com" target="_blank">
+                    <button class="contactButton">Contact me</button>
+                </a>
+            </div>
         </div>
+        <img src="img/me2.png" alt="Sam Siu" class="aa">
     </div>
 
-    <div class="layer2">
-        <div class="layer2Container"> 
-            <h1>Over mezelf</h1>
-            <p class="overMezelf"> Mijn naam is Sam, en ik ben een enthousiaste softwareontwikkelaar in opleiding aan het MBO College Almere. 
-                Ik heb me verdiept in Java, JavaScript, PHP en MySQL Workbench. 
-                Door mijn studie en projectwerk heb ik niet alleen technische vaardigheden opgedaan, maar ook geleerd hoe belangrijk teamwork,
-                communicatie en doorzettingsvermogen zijn in deze sector.
-                Mijn doel is om een full stack ontwikkelaar te worden, altijd op zoek naar nieuwe kennis en het leren van nieuwe technieken. 
-                Neem gerust een kijkje bij mijn projecten om een beeld krijgen van mijn werk en de reis die ik als ontwikkelaar heb afgelegd. 
-                Buiten de codering vind ik het leuk om te sporten en muziek te luisteren.</p>
+    <div class="workContainer" id="work">
+        <div class="workContainerText">A selection of my work.</div>
+        <div class="workItemsContainer">
+            <div class="workItems"></div>
+            <div class="workItems"></div>
+            <div class="workItems"></div>
+            <div class="workItems"></div>
         </div>
+        <div class="moreProjects">Load more projects +</div>
     </div>
 
-    <div class="second">
-        <h1 class="random">Mijn kenmerken zijn</h1>
+    <div class="second" id="Characteristics">
+        <div class="random">My characteristics are</div>
         <div class="images-second">
             <div class="image-subtext">
-                <img src="img/Doorzettingsvermogen.jpeg" alt="Doorzettingsvermogen">
-                <p>Doorzettingsvermogen</p>
+                <img src="img/Doorzettingsvermogen.jpeg" alt="Perseverance">
+                <p>Perseverance</p>
             </div>
             <div class="image-subtext">
-                <img src="img/vasthoudent (2).jpeg" alt="Vasthoudend">
-                <p>Vasthoudend</p>
+                <img src="img/vasthoudent (2).jpeg" alt="Determined">
+                <p>Determined</p>
             </div>
             <div class="image-subtext">
-                <img src="img/efficient.png" alt="Efficiënt">
-                <p>Efficiënt</p>  
+                <img src="img/efficient.png" alt="Efficient">
+                <p>Efficient</p>  
             </div>
             <div class="image-subtext">
-                <img src="img/creatief.jpeg" alt="Creatief">
-                <p>Creatief</p>
+                <img src="img/creatief.jpeg" alt="Creative">
+                <p>Creative</p>
             </div>
             <div class="image-subtext">
                 <img src="img/Coding meme.jpeg" alt="Humor">
@@ -81,27 +89,28 @@
         </div>
     </div>
 
-    <div class="layer3">
+    <div class="layer3" id="cv">
+        <div class="cvText">My résumé</div>
         <div class="layer3Container">
             <div class="topSection">
                 <div class="languages">
-                    <h4>Talen die ik kan spreken</h4>
-                    <p>Nederlands</p>
-                    <p>Engels</p>
-                    <p>Kantonees/Mandarijn</p>
+                    <h4>Languages I speak</h4>
+                    <p>Dutch</p>
+                    <p>English</p>
+                    <p>Cantonese/Mandarin</p>
                 </div>
                 <div class="education">
-                    <h4>Opleidingen</h4>
-                    <p>Software Development (mbo niveau 4), MBO College Almere - 2023-heden</p>
-                    <p>VMBO Porteum, Lelystad - 2019 - 2023</p>
+                    <h4>Education</h4>
+                    <p>Software Development (MBO Level 4), MBO College Almere - 2023-Present</p>
+                    <p>VMBO Porteum, Lelystad - 2019-2023</p>
                 </div>
             </div>
             <div class="workExperience">
-                <h4>Mijn werkervaring</h4>
-                <p>Horecamedewerker bij Fashion Café - sinds 10 maanden</p>
-                <p>Stage bij Promo Trade - 2 weken</p>
-                <p>Horecamedewerker bij Patat Lin - 3 maanden</p>
-                <p>Vulploegmedewerker bij Plus - 1 jaar</p>
+                <h4>My work experience</h4>
+                <p>Hospitality Worker at Fashion Café - 1 Year</p>
+                <p>Internship at Promo Trade - 2 weeks</p>
+                <p>Hospitality Worker at Patat Lin - 3 months</p>
+                <p>Stock Clerk at Plus - 1 year</p>
             </div>
         </div>
     </div>
@@ -122,30 +131,37 @@
         </div>
     </footer>
 
-
     <script>
-        // After the blue line appears, animate the triangles
-        gsap.to(".clip-left", {
-            duration: 1.5,
-            x: "-100%",
-            ease: "power2.inOut",
-            delay: 1.5 // Start after blue line animation
+        const aboutLink = document.getElementById('about-link');
+        const aboutModal = document.getElementById('about-modal');
+        const closeBtn = document.querySelector('.close-btn');
+
+        aboutLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            aboutModal.style.display = 'flex';
         });
 
-        gsap.to(".clip-right", {
-            duration: 1.5,
-            x: "100%",
-            ease: "power2.inOut",
-            delay: 1.5 // Start after blue line animation
+        closeBtn.addEventListener('click', () => {
+            aboutModal.style.display = 'none';
         });
 
-        // Fade out the loader after animation
-        gsap.to(".loader", {
-            duration: 1.5,
-            opacity: 0,
-            pointerEvents: "none",
-            delay: 3 // Adjusted delay to account for animations
+        window.addEventListener('click', (e) => {
+            if (e.target === aboutModal) {
+                aboutModal.style.display = 'none';
+            }
         });
+
+        const header = document.querySelector('.background-container'); 
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+
     </script>
 
 </body>
