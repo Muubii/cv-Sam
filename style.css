@@ -142,12 +142,33 @@ h1 {
 
 .workItems {
     background-color: #424242;
+    color: white;
     width: 35vw;
     height: 20vw;
     border-radius: 10px;
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workItems:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.workItems h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.workItems p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ddd;
 }
 
 .workContainerText{
