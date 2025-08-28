@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../Downloads/cv-Sam-da355703c9792ea2f07954eb193f09407af86c0d/.vscode"
+		},
+		{
+			"path": "../../../../Downloads/cv-Sam-da355703c9792ea2f07954eb193f09407af86c0d/img"
+		},
+		{
+			"path": "../../../../Downloads/cv-Sam-da355703c9792ea2f07954eb193f09407af86c0d/projects"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cv-Sam"
+	}
+}
